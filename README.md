@@ -57,7 +57,7 @@ Now you can go ahead and edit the __Build.sh__. This file links to the appropria
 To run it please do the following: 
 ```bash
 chmod +x Build.sh
-./Installation.sh
+./Build.sh
 ```
 
 __NOTE:__ The paths for the cmake inside the Build.sh are relative but they can be written in absolute paths if any errors arise
