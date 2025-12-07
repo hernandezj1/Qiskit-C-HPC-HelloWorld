@@ -10,18 +10,18 @@ make c
 
 cd ..
 
-#Qiskit Runtime C
-git clone https://github.com/Qiskit/qiskit-ibm-runtime-c.git
-cd qiskit-ibm-runtime-c
-mkdir build
-cd build
-cmake ..
-make
+#Qiskit Runtime C- Build method may change so only the QRMI is currently installed and made
+#git clone https://github.com/Qiskit/qiskit-ibm-runtime-c.git
+#cd qiskit-ibm-runtime-c
+#mkdir build
+#cd build
+#cmake ..
+#make
 
-cd ../..
+#cd ../..
 
 # Qiskit Resource Manager
-git clone git@github.com:qiskit-community/qrmi.git
+git clone https://github.com/qiskit-community/qrmi.git
 cd qrmi
 cargo build --release
 
