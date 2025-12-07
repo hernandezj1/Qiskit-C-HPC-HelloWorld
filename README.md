@@ -31,7 +31,7 @@ module load gnu/13.2.0
 ```
 
 ## Qiskit dependendies
-Having completed the environment setup you can now proceed to run the first of our script __Installation.sh__. This script installs and makes the Qiskit, Qiskit-Cpp, Qiskit Runtime and Qiskit resource manager interface repos, following the instructions set forth on the (Qiskit-C++ repo)[https://github.com/Qiskit/qiskit-cpp/tree/main?tab=readme-ov-file].
+Having completed the environment setup you can now proceed to run the first of our script __Installation.sh__. This script installs and makes the Qiskit, Qiskit-Cpp, Qiskit Runtime and Qiskit resource manager interface repos, following the instructions set forth on the [Qiskit-C++ repo](https://github.com/Qiskit/qiskit-cpp/tree/main?tab=readme-ov-file).
 
 
 
