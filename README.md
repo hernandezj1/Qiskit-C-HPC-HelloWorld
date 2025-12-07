@@ -1,2 +1,2 @@
 # Qiskit-C-HPC-HelloWorld
-This git repo intializes all dependencies and environments for expeirmenting with the Qiskit C++ API in a Conda environment. 
+This purpose of this repo is to provide an approachable tutorial for the use of Qiskit C++ API through a Conda environment for HPC use. It was produce usingv the FSU HPC cluster and therefore environment specs must be edited for your own cluster but the structure should serve as a starting point for all looking to start the use of compiled programs for their Quantum and/or Hybrid workloads.
