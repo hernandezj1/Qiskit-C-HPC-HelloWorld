@@ -4,7 +4,7 @@
 cd qiskit-cpp/samples
 mkdir build
 cd build 
-cmake  -DQISKIT_ROOT=../../../qiskit/ -DCMAKE_EXE_LINKER_FLAGS="-Wl,-rpath=$CONDA_PREFIX/lib" -DQRMI_ROOT=/../../../qrmi/ ..
+cmake  -DQISKIT_ROOT=/path/to/qiskit/ -DCMAKE_EXE_LINKER_FLAGS="-Wl,-rpath=$CONDA_PREFIX/lib" -DQRMI_ROOT=/path/to/qrmi/ ..
 make
 
 # if you want to build with qiskit runtime instead run the following:
