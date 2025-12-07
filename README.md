@@ -26,12 +26,45 @@ Then you can load appropriate environment modules that you will need going forwa
 
 ```bash
 module purge
-module load webproxy
+module load webproxy # This allows connection to the internet, check the process for your HPC resource
 module load gnu/13.2.0
 ```
 
 ## Qiskit dependendies
-Having completed the environment setup you can now proceed to run the first of our script __Installation.sh__. This script installs and makes the Qiskit, Qiskit-Cpp, Qiskit Runtime and Qiskit resource manager interface repos, following the instructions set forth on the [Qiskit-C++ repo](https://github.com/Qiskit/qiskit-cpp/tree/main?tab=readme-ov-file).
+Having completed the environment setup you can now proceed to run the __Installation.sh__. This script installs and makes the Qiskit, Qiskit-Cpp, Qiskit Runtime and Qiskit resource manager interface repos, following the instructions set forth on the [Qiskit-C++ repo](https://github.com/Qiskit/qiskit-cpp/tree/main?tab=readme-ov-file).
+
+## Building your code
+Inside the Qiskit-CPP folder you will now find a folder called samples which should have 4 code samples allowing you try out different functionalities in Qiskit including 2 which allow submissions to the IBM Quantum Cloud. To use them we will now instantiate our environment variables and build them.
+
+### Step 1 - IBM credentials
+Upload your account credentials to $HOME/.qiskit/qiskit-ibm.json (see https://github.com/Qiskit/qiskit-ibm-runtime?tab=readme-ov-file#save-your-account-on-disk) or set the following environment variables.
+
+```bash
+QISKIT_IBM_TOKEN=<your API key>
+QISKIT_IBM_INSTANCE=<your CRN>
+```
+
+### Step 2- Build C++ files
+Now you can go ahead and edit the __Build.sh__. This file links to the appropriate conda environment file and make all 4 sample files available for execution. To run your own code feel free to edit the 4 files provided or add more files. 
+
+__NOTE:__ The paths for the cmake inside the Build.sh are relative but they can be written in absolute paths if any errors arise
+
+## Submitting your jobs
+
+Having completed all of the above now we will run our codes, which we could do simply by the following line: 
+
+```bash
+./circuit-test
+```
+
+But we want to know how to run them with SLURM, the scheduler and resource manager for many HPC Centers. To do this we need to create an sbatch script that will ask for the appropriate resources , store our results and log any errors whould they occur for good practice. To do this we have created a __Submit_script.sh__ which serves as a template for submitting a single C++ file that runs the job on the IBM Quantum resources.
+
+__NOTE:__ Arguments on the subit script are written for FSU conventions but can be changed for any HPC resource that uses the scheduler.
+
+
+
+
+
 
 
 
