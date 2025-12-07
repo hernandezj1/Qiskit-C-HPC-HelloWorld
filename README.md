@@ -54,13 +54,14 @@ QISKIT_IBM_INSTANCE=<your CRN>
 ### Step 2- Build C++ files
 Now you can go ahead and edit the __Build.sh__. This file links to the appropriate conda environment file and make all 4 sample files available for execution. To run your own code feel free to edit the 4 files provided or add more files. 
 
+__NOTE:__ Here you must edit the paths to be preferably absolute paths from your root directory for ease of navigation and to minimize path errors. After this is done proceed. 
+
 To run it please do the following: 
 ```bash
 chmod +x Build.sh
 ./Build.sh
 ```
 
-__NOTE:__ The paths for the cmake inside the Build.sh are relative but they can be written in absolute paths if any errors arise
 
 ## Submitting your jobs
 
